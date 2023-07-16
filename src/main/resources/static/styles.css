@@ -1,0 +1,15 @@
+.ingredient-group {
+    float: left;
+    width: 50%;
+}
+
+/* Clear floats after the columns */
+.grid:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.validationError{
+    color: red;
+}
