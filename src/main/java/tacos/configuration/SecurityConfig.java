@@ -52,7 +52,9 @@ public class SecurityConfig {
                         .requestMatchers("/design", "/orders").hasRole("ROLE_USER")
                         .requestMatchers("/", "/**").permitAll()
                         .anyRequest().authenticated()
-                ).formLogin(form -> form.loginPage("/login"));
+                )
+                .formLogin(form -> form.loginPage("/login"))
+                .logout(logout -> logout.logoutSuccessUrl("/"));
         return http.build();
 
     }
