@@ -3,6 +3,7 @@ package tacos.domain;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToMany;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.PrePersist;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.Digits;
@@ -21,6 +22,8 @@ import org.hibernate.validator.constraints.CreditCardNumber;
 public class Order implements Serializable {
 
     private static final long serialVersionUID = 1L;
+    @ManyToOne
+    private UserInf user;
     @Id
     private String id;
     private LocalDateTime placedAt;

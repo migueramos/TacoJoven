@@ -1,9 +1,12 @@
 package tacos.domain;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.UUID;
 import lombok.AccessLevel;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -16,10 +19,11 @@ import org.springframework.security.core.userdetails.UserDetails;
 @Data
 @NoArgsConstructor(access = AccessLevel.PROTECTED, force = true)
 @RequiredArgsConstructor
-public class User implements UserDetails {
+public class UserInf implements UserDetails {
     private static final long serialVersionUID = 1L;
     @Id
-    private String id;
+    @GeneratedValue(strategy = GenerationType.UUID)
+    private UUID id;
     private final String username;
     private final String password;
     private final String fullName;

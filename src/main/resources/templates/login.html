@@ -7,7 +7,7 @@
 
     <body>
         <h1>Login</h1>
-        <img th:src="@{/images/taco.png}">
+        <img th:src="@{/images/logo.png}">
 
         <div th:if="${error}">
             Unable to login. Check your username and password.
@@ -25,6 +25,7 @@
             <input type="text" name="password" id="password" /><br/>
 
             <input type="submit" value="Login">
+
         </form>
     </body>
 </html>

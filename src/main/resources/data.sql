@@ -1,3 +1,4 @@
+/*
 delete from Taco_Order_Tacos;
 delete from Taco_Ingredients;
 delete from Taco;
@@ -23,4 +24,4 @@ values ('JACK', 'Monterrey Jack', 'CHEESE');
 insert into Ingredient (id, name, type)
 values ('SLSA', 'Salsa', 'SAUCE');
 insert into Ingredient (id, name, type)
-values ('SRCR', 'Sour Cream', 'SAUCE');
+values ('SRCR', 'Sour Cream', 'SAUCE');*/

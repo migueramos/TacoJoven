@@ -6,7 +6,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import tacos.dao.UserRepository;
-import tacos.domain.User;
+import tacos.domain.UserInf;
 
 @Service
 public class UserRepositoryUserDetailsService implements UserDetailsService {
@@ -20,7 +20,7 @@ public class UserRepositoryUserDetailsService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        User user = repository.findByUserName(username);
+        UserInf user = repository.findByUsername(username);
         if (user != null){
             return user;
         }

@@ -49,7 +49,7 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain authorizeFilter(HttpSecurity http) throws Exception {
         http.authorizeHttpRequests(request -> request
-                        .requestMatchers("/design", "/orders").hasRole("ROLE_USER")
+                        .requestMatchers("/design", "/orders").hasAuthority("ROLE_USER")
                         .requestMatchers("/", "/**").permitAll()
                         .anyRequest().authenticated()
                 )
